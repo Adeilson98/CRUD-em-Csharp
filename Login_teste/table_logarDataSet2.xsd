@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="table_logarDataSet" targetNamespace="http://tempuri.org/table_logarDataSet2.xsd" xmlns:mstns="http://tempuri.org/table_logarDataSet2.xsd" xmlns="http://tempuri.org/table_logarDataSet2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="table_logarConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="table_logarConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Login_teste.Properties.Settings.GlobalReference.Default.table_logarConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="cadastroTableAdapter" GeneratorDataComponentClassName="cadastroTableAdapter" Name="cadastro" UserDataComponentName="cadastroTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="table_logarConnectionString (Settings)" DbObjectName="table_logar.cadastro" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `nome`, `nascimento`, `RG`, `CPF`, `endereco`, `numero`, `celular`, `telefoneres` FROM `cadastro`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="table_logarDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="table_logarDataSet" msprop:Generator_UserDSName="table_logarDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="cadastro" msprop:Generator_TableClassName="cadastroDataTable" msprop:Generator_TableVarName="tablecadastro" msprop:Generator_TablePropName="cadastro" msprop:Generator_RowDeletingName="cadastroRowDeleting" msprop:Generator_RowChangingName="cadastroRowChanging" msprop:Generator_RowEvHandlerName="cadastroRowChangeEventHandler" msprop:Generator_RowDeletedName="cadastroRowDeleted" msprop:Generator_UserTableName="cadastro" msprop:Generator_RowChangedName="cadastroRowChanged" msprop:Generator_RowEvArgName="cadastroRowChangeEvent" msprop:Generator_RowClassName="cadastroRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
