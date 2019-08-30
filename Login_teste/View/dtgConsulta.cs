@@ -33,15 +33,10 @@ namespace Login_teste.View
 
         public void DtgConsul_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+            dtgConsul = new DataGridView();
         }
 
         private void DtgConsulta_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Button1_Click(object sender, EventArgs e)
         {
             string strProvider = "server=localhost;user id=root;port=3306;database=table_logar";
 
@@ -68,6 +63,11 @@ namespace Login_teste.View
 
 
             dtgConsul.DataSource = clientes;
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
