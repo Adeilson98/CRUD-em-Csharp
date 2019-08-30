@@ -75,13 +75,14 @@
             // novaConsultaToolStripMenuItem
             // 
             this.novaConsultaToolStripMenuItem.Name = "novaConsultaToolStripMenuItem";
-            this.novaConsultaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.novaConsultaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.novaConsultaToolStripMenuItem.Text = "Nova Consulta";
+            this.novaConsultaToolStripMenuItem.Click += new System.EventHandler(this.NovaConsultaToolStripMenuItem_Click);
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 

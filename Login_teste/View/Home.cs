@@ -67,5 +67,11 @@ namespace Login_teste.View
         {
 
         }
+
+        private void NovaConsultaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dtgConsulta entrar = new dtgConsulta();
+            entrar.Show();
+        }
     }
 }

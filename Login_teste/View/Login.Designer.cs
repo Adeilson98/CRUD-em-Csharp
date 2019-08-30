@@ -42,7 +42,7 @@
             // 
             // txtLogin
             // 
-            this.txtLogin.Location = new System.Drawing.Point(482, 89);
+            this.txtLogin.Location = new System.Drawing.Point(188, 72);
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(170, 20);
             this.txtLogin.TabIndex = 0;
@@ -50,7 +50,7 @@
             // 
             // txtSenha
             // 
-            this.txtSenha.Location = new System.Drawing.Point(482, 141);
+            this.txtSenha.Location = new System.Drawing.Point(188, 124);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(170, 20);
@@ -60,7 +60,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(430, 92);
+            this.label1.Location = new System.Drawing.Point(136, 75);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 13);
             this.label1.TabIndex = 2;
@@ -69,7 +69,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(435, 144);
+            this.label2.Location = new System.Drawing.Point(141, 127);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 13);
             this.label2.TabIndex = 3;
@@ -83,7 +83,7 @@
             this.opçõesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(692, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(517, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -105,7 +105,7 @@
             // 
             // btnEntrar
             // 
-            this.btnEntrar.Location = new System.Drawing.Point(422, 184);
+            this.btnEntrar.Location = new System.Drawing.Point(128, 167);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(112, 25);
             this.btnEntrar.TabIndex = 5;
@@ -115,7 +115,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(540, 184);
+            this.button2.Location = new System.Drawing.Point(246, 167);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(112, 25);
             this.button2.TabIndex = 6;
@@ -127,7 +127,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(692, 279);
+            this.ClientSize = new System.Drawing.Size(517, 279);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.label2);
