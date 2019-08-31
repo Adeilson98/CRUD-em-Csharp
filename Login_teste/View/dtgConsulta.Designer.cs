@@ -42,6 +42,7 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button5 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgConsul)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -91,7 +92,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(37, 43);
+            this.button1.Location = new System.Drawing.Point(37, 96);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
@@ -101,7 +102,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(37, 99);
+            this.button2.Location = new System.Drawing.Point(37, 152);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 3;
@@ -110,7 +111,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(37, 155);
+            this.button3.Location = new System.Drawing.Point(37, 208);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 4;
@@ -119,19 +120,20 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button5);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Location = new System.Drawing.Point(634, 111);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(154, 209);
+            this.groupBox1.Size = new System.Drawing.Size(154, 270);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Editar";
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(647, 388);
+            this.button4.Location = new System.Drawing.Point(671, 409);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(99, 29);
             this.button4.TabIndex = 6;
@@ -177,6 +179,16 @@
             this.textBox1.Size = new System.Drawing.Size(177, 20);
             this.textBox1.TabIndex = 10;
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(37, 43);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 5;
+            this.button5.Text = "Exibir";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.Button5_Click);
+            // 
             // dtgConsulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -220,5 +232,6 @@
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.TextBox textBox1;
         public System.Windows.Forms.DataGridView dtgConsul;
+        private System.Windows.Forms.Button button5;
     }
 }

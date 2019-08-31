@@ -83,6 +83,9 @@
   <ItemGroup>
     <Compile Include="Cadastrar\ComandoCadastro.cs" />
     <Compile Include="Cadastrar\DtgConsulta.cs" />
+    <Compile Include="CRUD\ClasseBLL.cs" />
+    <Compile Include="CRUD\Conectar.cs" />
+    <Compile Include="CRUD\Supercombo.cs" />
     <Compile Include="Eminem\ComandoLogin.cs" />
     <Compile Include="Eminem\Conexao.cs" />
     <Compile Include="Modelo2\ProjetoCadastrar.cs" />
