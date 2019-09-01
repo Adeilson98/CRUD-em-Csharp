@@ -20,6 +20,7 @@ namespace Login_teste.View
         public dtgConsulta()
         {
             InitializeComponent();
+            FormBorderStyle = FormBorderStyle.FixedDialog;
         }
 
         private void SairToolStripMenuItem_Click(object sender, EventArgs e)

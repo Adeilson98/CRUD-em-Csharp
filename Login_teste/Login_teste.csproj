@@ -81,14 +81,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cadastrar\ComandoCadastro.cs" />
     <Compile Include="Cadastrar\DtgConsulta.cs" />
     <Compile Include="CRUD\ClasseBLL.cs" />
     <Compile Include="CRUD\Conectar.cs" />
+    <Compile Include="CRUD\Conexao.cs" />
+    <Compile Include="CRUD\Model\Pessoa.cs" />
+    <Compile Include="CRUD\PessoaBLL.cs" />
+    <Compile Include="CRUD\PessoaDAO.cs" />
     <Compile Include="CRUD\Supercombo.cs" />
     <Compile Include="Eminem\ComandoLogin.cs" />
     <Compile Include="Eminem\Conexao.cs" />
-    <Compile Include="Modelo2\ProjetoCadastrar.cs" />
     <Compile Include="Modelo\ProjetoEntrar.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -151,6 +153,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Modelo2\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

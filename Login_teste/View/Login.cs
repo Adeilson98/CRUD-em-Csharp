@@ -18,6 +18,7 @@ namespace Login_teste.View
         public Login()
         {
             InitializeComponent();
+            FormBorderStyle = FormBorderStyle.FixedDialog;
         }
 
         private void button1_Click(object sender, EventArgs e)
