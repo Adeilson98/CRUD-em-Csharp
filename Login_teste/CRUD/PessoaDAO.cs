@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Login_teste.CRUD.Model;
 using MySql.Data.MySqlClient;
+using System.Data;
 
 namespace Login_teste.CRUD
 {
@@ -30,6 +31,33 @@ namespace Login_teste.CRUD
                 comando.Parameters.AddWithValue("@telefoneres", pessoa.Telefone);
 
                 comando.ExecuteNonQuery();
+            }
+            catch (Exception erro)
+            {
+
+                throw erro;
+            }
+            finally
+            {
+                FecharBanco();
+            }
+        }
+        public DataTable listar()
+        {
+            try
+            {
+                AbrirBanco();
+
+                DataTable dt = new DataTable();
+                MySqlDataAdapter da = new MySqlDataAdapter();
+
+                comando = new MySqlCommand("SELECT * FROM table_logar.cadastro ORDER BY nome", conexao);
+
+                da.SelectCommand = comando;
+
+                da.Fill(dt);
+
+                return dt;
             }
             catch (Exception erro)
             {

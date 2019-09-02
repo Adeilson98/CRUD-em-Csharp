@@ -21,6 +21,13 @@ namespace Login_teste.View
         {
             InitializeComponent();
             FormBorderStyle = FormBorderStyle.FixedDialog;
+            listar();
+        }
+        private void listar()
+        {
+            PessoaBLL pessoaBLL = new PessoaBLL();
+
+            dataGridView1.DataSource = pessoaBLL.listar();
         }
 
         private void SairToolStripMenuItem_Click(object sender, EventArgs e)
@@ -35,7 +42,7 @@ namespace Login_teste.View
 
         public void DtgConsul_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            dtgConsul = new DataGridView();
+           dataGridView1 = new DataGridView();
         }
 
         private void DtgConsulta_Load(object sender, EventArgs e)
@@ -53,11 +60,38 @@ namespace Login_teste.View
 
             try
             {
-                dtgConsul.DataSource = bll.ExibirDadosBD();
+                dataGridView1.DataSource = bll.ExibirDadosBD();
             }
             catch (Exception erro)
             {
                 MessageBox.Show("Erro ao Exibir Banco de Dados" + erro);
+            }
+        }
+
+        private void DtgConsul_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                txtNome.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                txtNascimento.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                comboBox1.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                textBox3.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+                txtCPF.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+                txtEndereco.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+                txtNumero.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+                txtCelular.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
+                txtTelefone.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString();
+                
+            }
+            catch (Exception erro)
+            {
+
+                throw erro;
             }
         }
     }
