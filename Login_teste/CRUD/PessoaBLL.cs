@@ -53,5 +53,17 @@ namespace Login_teste.CRUD
                 throw erro;
             }
         }
+        public void excluir(Pessoa pessoa)
+        {
+            try
+            {
+                pessoaDAO.excluir(pessoa);
+            }
+            catch (Exception erro)
+            {
+
+                throw erro;
+            }
+        }
     }
 }

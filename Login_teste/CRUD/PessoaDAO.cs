@@ -101,5 +101,22 @@ namespace Login_teste.CRUD
                 throw erro;
             }
         }
+        public void excluir(Pessoa pessoa)
+        {
+            try
+            {
+                AbrirBanco();
+
+                comando = new MySqlCommand("DELETE FROM table_logar.cadastro WHERE ID = @ID", conexao);
+                comando.Parameters.AddWithValue("@ID", pessoa.ID);
+
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception erro)
+            {
+
+                throw erro;
+            }
+        }
     }
 }

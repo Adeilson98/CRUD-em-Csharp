@@ -54,6 +54,18 @@ namespace Login_teste.View
 
             listar();
         }
+        private void excluir(Pessoa pessoa)
+        {
+            PessoaBLL pessoaBLL = new PessoaBLL();
+
+            pessoa.ID = Convert.ToInt32(txtID.Text);
+
+            pessoaBLL.excluir(pessoa);
+
+            MessageBox.Show("Cadastro Excluido com Sucesso!");
+
+            listar();
+        }
 
         private void SairToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -123,6 +135,12 @@ namespace Login_teste.View
 
                 throw erro;
             }
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            Pessoa pessoa = new Pessoa();
+            excluir(pessoa);
         }
     }
 }
