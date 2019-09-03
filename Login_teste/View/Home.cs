@@ -32,6 +32,9 @@ namespace Login_teste.View
             pessoa.Cpf = txtCPF.Text;
             pessoa.Endereco = txtEndereco.Text;
             pessoa.Numero = txtNumero.Text;
+            pessoa.Bairro = txtBairro.Text;
+            pessoa.Cep = txtCEP.Text;
+            pessoa.Cidade = txtCidade.Text;
             pessoa.Celular = txtCelular.Text;
             pessoa.Telefone = txtTelefone.Text;
 

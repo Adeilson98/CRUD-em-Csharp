@@ -41,5 +41,17 @@ namespace Login_teste.CRUD
                 throw erro;
             }
         }
+        public void editar(Pessoa pessoa)
+        {
+            try
+            {
+                pessoaDAO.editar(pessoa);
+            }
+            catch (Exception erro)
+            {
+
+                throw erro;
+            }
+        }
     }
 }

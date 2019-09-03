@@ -52,6 +52,12 @@
             this.txtCPF = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.txtCidade = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtCEP = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtBairro = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -105,7 +111,7 @@
             // 
             // txtNumero
             // 
-            this.txtNumero.Location = new System.Drawing.Point(374, 141);
+            this.txtNumero.Location = new System.Drawing.Point(15, 370);
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(270, 20);
             this.txtNumero.TabIndex = 3;
@@ -148,7 +154,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(371, 118);
+            this.label3.Location = new System.Drawing.Point(12, 347);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 13);
             this.label3.TabIndex = 22;
@@ -263,11 +269,65 @@
             this.label9.TabIndex = 34;
             this.label9.Text = "Sexo:";
             // 
+            // txtCidade
+            // 
+            this.txtCidade.Location = new System.Drawing.Point(319, 414);
+            this.txtCidade.Name = "txtCidade";
+            this.txtCidade.Size = new System.Drawing.Size(201, 20);
+            this.txtCidade.TabIndex = 41;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(316, 398);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(43, 13);
+            this.label12.TabIndex = 40;
+            this.label12.Text = "Cidade:";
+            // 
+            // txtCEP
+            // 
+            this.txtCEP.Location = new System.Drawing.Point(18, 455);
+            this.txtCEP.Name = "txtCEP";
+            this.txtCEP.Size = new System.Drawing.Size(201, 20);
+            this.txtCEP.TabIndex = 39;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(15, 439);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(31, 13);
+            this.label11.TabIndex = 38;
+            this.label11.Text = "CEP:";
+            // 
+            // txtBairro
+            // 
+            this.txtBairro.Location = new System.Drawing.Point(18, 414);
+            this.txtBairro.Name = "txtBairro";
+            this.txtBairro.Size = new System.Drawing.Size(201, 20);
+            this.txtBairro.TabIndex = 37;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(15, 398);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(37, 13);
+            this.label10.TabIndex = 36;
+            this.label10.Text = "Bairro:";
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(671, 523);
+            this.Controls.Add(this.txtCidade);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.txtCEP);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.txtBairro);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.txtCPF);
@@ -326,5 +386,11 @@
         private System.Windows.Forms.TextBox txtCPF;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtCidade;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtCEP;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtBairro;
+        private System.Windows.Forms.Label label10;
     }
 }

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Login_teste.Cadastrar;
 using Login_teste.CRUD;
+using Login_teste.CRUD.Model;
 using MySql.Data.MySqlClient;
 
 namespace Login_teste.View
@@ -28,6 +29,30 @@ namespace Login_teste.View
             PessoaBLL pessoaBLL = new PessoaBLL();
 
             dataGridView1.DataSource = pessoaBLL.listar();
+        }
+        private void editar(Pessoa pessoa)
+        {
+            PessoaBLL pessoaBLL = new PessoaBLL();
+
+            pessoa.ID = Convert.ToInt32(txtID.Text);
+            pessoa.Nome = txtNome.Text;
+            pessoa.Nascimento = dateTimePicker1.Value;
+            pessoa.Sexo = comboBox1.Text;
+            pessoa.Rg = txtRG.Text;
+            pessoa.Cpf = txtCPF.Text;
+            pessoa.Endereco = txtEndereco.Text;
+            pessoa.Numero = txtNumero.Text;
+            pessoa.Bairro = txtBairro.Text;
+            pessoa.Cep = txtCEP.Text;
+            pessoa.Cidade = txtCidade.Text;
+            pessoa.Celular = txtCelular.Text;
+            pessoa.Telefone = txtTelefone.Text;
+
+            pessoaBLL.editar(pessoa);
+
+            MessageBox.Show("Editado com Sucesso!");
+
+            listar();
         }
 
         private void SairToolStripMenuItem_Click(object sender, EventArgs e)
@@ -51,7 +76,8 @@ namespace Login_teste.View
         }
         private void Button1_Click(object sender, EventArgs e)
         {
-            
+            Pessoa pessoa = new Pessoa();
+            editar(pessoa);
         }
 
         private void Button5_Click(object sender, EventArgs e)
@@ -77,16 +103,20 @@ namespace Login_teste.View
         {
             try
             {
-                txtNome.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-                txtNascimento.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-                comboBox1.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-                textBox3.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-                txtCPF.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
-                txtEndereco.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
-                txtNumero.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
-                txtCelular.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
-                txtTelefone.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString();
-                
+                txtID.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                txtNome.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                dateTimePicker1.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                comboBox1.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+                txtRG.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+                txtCPF.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+                txtEndereco.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+                txtNumero.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
+                txtBairro.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString();
+                txtCEP.Text = dataGridView1.CurrentRow.Cells[9].Value.ToString();
+                txtCidade.Text = dataGridView1.CurrentRow.Cells[10].Value.ToString();
+                txtCelular.Text = dataGridView1.CurrentRow.Cells[11].Value.ToString();
+                txtTelefone.Text = dataGridView1.CurrentRow.Cells[12].Value.ToString();
+
             }
             catch (Exception erro)
             {
