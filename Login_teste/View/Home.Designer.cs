@@ -45,7 +45,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.dtNascimento = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.txtEndereco = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -58,6 +57,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.txtBairro = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.dtNascimento = new System.Windows.Forms.DateTimePicker();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,7 +67,7 @@
             this.arquivoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(671, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(672, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -104,14 +104,14 @@
             // 
             // txtRG
             // 
-            this.txtRG.Location = new System.Drawing.Point(12, 200);
+            this.txtRG.Location = new System.Drawing.Point(12, 229);
             this.txtRG.Name = "txtRG";
             this.txtRG.Size = new System.Drawing.Size(270, 20);
             this.txtRG.TabIndex = 2;
             // 
             // txtNumero
             // 
-            this.txtNumero.Location = new System.Drawing.Point(15, 370);
+            this.txtNumero.Location = new System.Drawing.Point(18, 395);
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(270, 20);
             this.txtNumero.TabIndex = 3;
@@ -119,7 +119,7 @@
             // 
             // txtCelular
             // 
-            this.txtCelular.Location = new System.Drawing.Point(374, 200);
+            this.txtCelular.Location = new System.Drawing.Point(320, 79);
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(270, 20);
             this.txtCelular.TabIndex = 4;
@@ -127,7 +127,7 @@
             // 
             // txtTelefone
             // 
-            this.txtTelefone.Location = new System.Drawing.Point(374, 254);
+            this.txtTelefone.Location = new System.Drawing.Point(320, 133);
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(273, 20);
             this.txtTelefone.TabIndex = 5;
@@ -145,7 +145,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 175);
+            this.label2.Location = new System.Drawing.Point(15, 204);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(26, 13);
             this.label2.TabIndex = 21;
@@ -154,7 +154,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 347);
+            this.label3.Location = new System.Drawing.Point(15, 372);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 13);
             this.label3.TabIndex = 22;
@@ -163,7 +163,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(371, 177);
+            this.label4.Location = new System.Drawing.Point(317, 56);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(95, 13);
             this.label4.TabIndex = 23;
@@ -172,7 +172,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(371, 232);
+            this.label5.Location = new System.Drawing.Point(317, 111);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(110, 13);
             this.label5.TabIndex = 24;
@@ -180,7 +180,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(347, 457);
+            this.button1.Location = new System.Drawing.Point(281, 476);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(113, 23);
             this.button1.TabIndex = 25;
@@ -190,7 +190,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(488, 457);
+            this.button2.Location = new System.Drawing.Point(422, 476);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(113, 23);
             this.button2.TabIndex = 26;
@@ -201,24 +201,16 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 115);
+            this.label6.Location = new System.Drawing.Point(12, 156);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(66, 13);
             this.label6.TabIndex = 27;
             this.label6.Text = "Nascimento:";
             // 
-            // dtNascimento
-            // 
-            this.dtNascimento.Location = new System.Drawing.Point(12, 138);
-            this.dtNascimento.Name = "dtNascimento";
-            this.dtNascimento.Size = new System.Drawing.Size(273, 20);
-            this.dtNascimento.TabIndex = 28;
-            this.dtNascimento.ValueChanged += new System.EventHandler(this.DtNascimento_ValueChanged);
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(15, 290);
+            this.label7.Location = new System.Drawing.Point(18, 315);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(56, 13);
             this.label7.TabIndex = 29;
@@ -226,7 +218,7 @@
             // 
             // txtEndereco
             // 
-            this.txtEndereco.Location = new System.Drawing.Point(12, 315);
+            this.txtEndereco.Location = new System.Drawing.Point(15, 340);
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(270, 20);
             this.txtEndereco.TabIndex = 30;
@@ -234,7 +226,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(15, 232);
+            this.label8.Location = new System.Drawing.Point(15, 258);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(30, 13);
             this.label8.TabIndex = 31;
@@ -242,7 +234,7 @@
             // 
             // txtCPF
             // 
-            this.txtCPF.Location = new System.Drawing.Point(12, 257);
+            this.txtCPF.Location = new System.Drawing.Point(12, 283);
             this.txtCPF.Name = "txtCPF";
             this.txtCPF.Size = new System.Drawing.Size(270, 20);
             this.txtCPF.TabIndex = 32;
@@ -254,7 +246,7 @@
             this.comboBox1.Items.AddRange(new object[] {
             "Masculino",
             "Feminino"});
-            this.comboBox1.Location = new System.Drawing.Point(374, 79);
+            this.comboBox1.Location = new System.Drawing.Point(14, 125);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 33;
@@ -263,7 +255,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(372, 56);
+            this.label9.Location = new System.Drawing.Point(12, 102);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(34, 13);
             this.label9.TabIndex = 34;
@@ -271,7 +263,7 @@
             // 
             // txtCidade
             // 
-            this.txtCidade.Location = new System.Drawing.Point(319, 414);
+            this.txtCidade.Location = new System.Drawing.Point(320, 176);
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(201, 20);
             this.txtCidade.TabIndex = 41;
@@ -279,7 +271,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(316, 398);
+            this.label12.Location = new System.Drawing.Point(317, 160);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(43, 13);
             this.label12.TabIndex = 40;
@@ -287,7 +279,7 @@
             // 
             // txtCEP
             // 
-            this.txtCEP.Location = new System.Drawing.Point(18, 455);
+            this.txtCEP.Location = new System.Drawing.Point(320, 215);
             this.txtCEP.Name = "txtCEP";
             this.txtCEP.Size = new System.Drawing.Size(201, 20);
             this.txtCEP.TabIndex = 39;
@@ -295,7 +287,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(15, 439);
+            this.label11.Location = new System.Drawing.Point(317, 199);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(31, 13);
             this.label11.TabIndex = 38;
@@ -303,7 +295,7 @@
             // 
             // txtBairro
             // 
-            this.txtBairro.Location = new System.Drawing.Point(18, 414);
+            this.txtBairro.Location = new System.Drawing.Point(21, 439);
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(201, 20);
             this.txtBairro.TabIndex = 37;
@@ -311,17 +303,26 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(15, 398);
+            this.label10.Location = new System.Drawing.Point(18, 423);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(37, 13);
             this.label10.TabIndex = 36;
             this.label10.Text = "Bairro:";
             // 
+            // dtNascimento
+            // 
+            this.dtNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtNascimento.Location = new System.Drawing.Point(12, 179);
+            this.dtNascimento.Name = "dtNascimento";
+            this.dtNascimento.Size = new System.Drawing.Size(273, 20);
+            this.dtNascimento.TabIndex = 28;
+            this.dtNascimento.ValueChanged += new System.EventHandler(this.DtNascimento_ValueChanged);
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(671, 523);
+            this.ClientSize = new System.Drawing.Size(672, 523);
             this.Controls.Add(this.txtCidade);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.txtCEP);
@@ -379,7 +380,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker dtNascimento;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtEndereco;
         private System.Windows.Forms.Label label8;
@@ -392,5 +392,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtBairro;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.DateTimePicker dtNascimento;
     }
 }

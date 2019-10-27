@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Login_teste.Modelo;
 using MySql.Data.MySqlClient;
-
+using System.Threading;
 
 namespace Login_teste.View
 {
@@ -20,6 +20,7 @@ namespace Login_teste.View
             InitializeComponent();
             FormBorderStyle = FormBorderStyle.FixedDialog;
         }
+        Thread th;
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -31,8 +32,10 @@ namespace Login_teste.View
                 if (controle.existe)
                 {
                     MessageBox.Show("Login efetuado com Sucesso!!", "Entrando", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Home entrar = new Home();
-                    entrar.Show();
+                    this.Close();
+                    th = new Thread(AbrirHome);
+                    th.SetApartmentState(ApartmentState.STA);
+                    th.Start();
                 }
                 else
                 {
@@ -45,10 +48,22 @@ namespace Login_teste.View
             }
         }
 
+        private void AbrirHome()
+        {
+            Application.Run(new Home());
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
-            NewLogin cadastrar = new NewLogin();
-            cadastrar.Show();
+            this.Close();
+            th = new Thread(AbrirCriar);
+            th.SetApartmentState(ApartmentState.STA);
+            th.Start();
+        }
+
+        private void AbrirCriar()
+        {
+            Application.Run(new NewLogin());
         }
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)

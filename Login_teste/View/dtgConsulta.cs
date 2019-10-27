@@ -1,21 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Login_teste.Cadastrar;
-using Login_teste.CRUD;
+﻿using Login_teste.CRUD;
 using Login_teste.CRUD.Model;
-using MySql.Data.MySqlClient;
+using System;
+using System.Windows.Forms;
+using System.Threading;
 
 namespace Login_teste.View
 {
     public partial class dtgConsulta : Form
     {
+        Thread th;
         public object CadastroDataSet { get; private set; }
 
         public dtgConsulta()
@@ -24,11 +17,60 @@ namespace Login_teste.View
             FormBorderStyle = FormBorderStyle.FixedDialog;
             listar();
         }
+        private void LimparTxt()
+        {
+            txtID.Clear();
+            txtNome.Clear();
+            comboBox1.SelectedIndex = -1;
+            txtRG.Clear();
+            txtCPF.Clear();
+            txtEndereco.Clear();
+            txtNumero.Clear();
+            txtBairro.Clear();
+            txtCEP.Clear();
+            txtCidade.Clear();
+            txtCelular.Clear();
+            txtTelefone.Clear();
+        }
+        private void BloquearTxt()
+        {
+            txtID.ReadOnly = true;
+            txtNome.Enabled = false;
+            comboBox1.Enabled = false;
+            dateTimePicker1.Enabled = false;
+            txtRG.Enabled = false;
+            txtCPF.Enabled = false;
+            txtEndereco.Enabled = false;
+            txtNumero.Enabled = false;
+            txtBairro.Enabled = false;
+            txtCEP.Enabled = false;
+            txtCidade.Enabled = false;
+            txtCelular.Enabled = false;
+            txtTelefone.Enabled = false;
+        }
+        private void DesbloquearTxt()
+        {
+            txtID.ReadOnly = true;
+            txtNome.Enabled = true;
+            comboBox1.Enabled = true;
+            dateTimePicker1.Enabled = true;
+            txtRG.Enabled = true;
+            txtCPF.Enabled = true;
+            txtEndereco.Enabled = true;
+            txtNumero.Enabled = true;
+            txtBairro.Enabled = true;
+            txtCEP.Enabled = true;
+            txtCidade.Enabled = true;
+            txtCelular.Enabled = true;
+            txtTelefone.Enabled = true;
+        }
         private void listar()
         {
             PessoaBLL pessoaBLL = new PessoaBLL();
 
             dataGridView1.DataSource = pessoaBLL.listar();
+
+            BloquearTxt();
         }
         private void editar(Pessoa pessoa)
         {
@@ -52,6 +94,8 @@ namespace Login_teste.View
 
             MessageBox.Show("Editado com Sucesso!");
 
+            LimparTxt();
+
             listar();
         }
         private void excluir(Pessoa pessoa)
@@ -64,12 +108,22 @@ namespace Login_teste.View
 
             MessageBox.Show("Cadastro Excluido com Sucesso!");
 
+            LimparTxt();
+
             listar();
         }
 
         private void SairToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.ExitThread();
+            this.Close();
+            th = new Thread(AbrirLogin);
+            th.SetApartmentState(ApartmentState.STA);
+            th.Start();
+        }
+
+        private void AbrirLogin()
+        {
+            Application.Run(new Login());
         }
 
         private void Button4_Click(object sender, EventArgs e)
@@ -79,7 +133,7 @@ namespace Login_teste.View
 
         public void DtgConsul_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-           dataGridView1 = new DataGridView();
+            dataGridView1 = new DataGridView();
         }
 
         private void DtgConsulta_Load(object sender, EventArgs e)
@@ -88,8 +142,7 @@ namespace Login_teste.View
         }
         private void Button1_Click(object sender, EventArgs e)
         {
-            Pessoa pessoa = new Pessoa();
-            editar(pessoa);
+            DesbloquearTxt();
         }
 
         private void Button5_Click(object sender, EventArgs e)
@@ -108,7 +161,7 @@ namespace Login_teste.View
 
         private void DtgConsul_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
         }
 
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -141,6 +194,31 @@ namespace Login_teste.View
         {
             Pessoa pessoa = new Pessoa();
             excluir(pessoa);
+        }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            Pessoa pessoa = new Pessoa();
+            editar(pessoa);
+        }
+
+        private void SalvarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Pessoa pessoa = new Pessoa();
+            editar(pessoa);
+        }
+
+        private void HomeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            th = new Thread(AbrirHome);
+            th.SetApartmentState(ApartmentState.STA);
+            th.Start();
+        }
+
+        private void AbrirHome()
+        {
+            Application.Run(new Home());
         }
     }
 }

@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Login_teste.CRUD.Model;
+﻿using Login_teste.CRUD.Model;
 using MySql.Data.MySqlClient;
+using System;
 using System.Data;
 
 namespace Login_teste.CRUD
 {
-    public class PessoaDAO: Conexao
+    public class PessoaDAO : Conexao
     {
         MySqlCommand comando = null;
 
@@ -19,7 +15,7 @@ namespace Login_teste.CRUD
             {
                 AbrirBanco();
 
-                comando = new MySqlCommand("INSERT INTO table_logar.cadastro (nome, nascimento, sexo, RG, CPF, endereco, numero, bairro, CEP, cidade, celular, telefoneres) VALUES (@nome, @nascimento, @sexo, @RG, @CPF, @endereco, @numero, @bairro, @CEP, @cidade, @celular, @telefoneres)", conexao);
+                comando = new MySqlCommand("INSERT INTO table_logar.cadastro (Nome, Nascimento, Sexo, RG, CPF, endereco, numero, bairro, CEP, cidade, celular, telefoneres) VALUES (@nome, @nascimento, @sexo, @RG, @CPF, @endereco, @numero, @bairro, @CEP, @cidade, @celular, @telefoneres)", conexao);
                 comando.Parameters.AddWithValue("@nome", pessoa.Nome);
                 comando.Parameters.AddWithValue("@nascimento", pessoa.Nascimento);
                 comando.Parameters.AddWithValue("@sexo", pessoa.Sexo);

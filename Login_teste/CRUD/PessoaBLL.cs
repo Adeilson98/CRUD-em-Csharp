@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Login_teste.CRUD.Model;
-using MySql.Data.MySqlClient;
+﻿using Login_teste.CRUD.Model;
+using System;
 using System.Data;
 
 namespace Login_teste.CRUD

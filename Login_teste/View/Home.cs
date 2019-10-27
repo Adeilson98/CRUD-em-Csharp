@@ -1,29 +1,37 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using MySql.Data.MySqlClient;
-using Login_teste.Cadastrar;
-using Login_teste.CRUD;
+﻿using Login_teste.CRUD;
 using Login_teste.CRUD.Model;
+using System;
+using System.Windows.Forms;
+using System.Threading;
 
 namespace Login_teste.View
 {
     public partial class Home : Form
     {
+        Thread th;
         public Home()
         {
             InitializeComponent();
             FormBorderStyle = FormBorderStyle.FixedDialog;
         }
+        private void LimparTxt()
+        {
+            txtNome.Clear();
+            comboBox1.SelectedIndex = -1;
+            txtRG.Clear();
+            txtCPF.Clear();
+            txtEndereco.Clear();
+            txtNumero.Clear();
+            txtBairro.Clear();
+            txtCEP.Clear();
+            txtCidade.Clear();
+            txtCelular.Clear();
+            txtTelefone.Clear();
+        }
         private void salvar(Pessoa pessoa)
         {
             PessoaBLL pessoaBLL = new PessoaBLL();
+
 
             pessoa.Nome = txtNome.Text;
             pessoa.Nascimento = dtNascimento.Value;
@@ -38,14 +46,24 @@ namespace Login_teste.View
             pessoa.Celular = txtCelular.Text;
             pessoa.Telefone = txtTelefone.Text;
 
+
             pessoaBLL.salvar(pessoa);
 
             MessageBox.Show("Cadastro Realizado!");
+            LimparTxt();
         }
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.ExitThread();
+            this.Close();
+            th = new Thread(AbrirLogin);
+            th.SetApartmentState(ApartmentState.STA);
+            th.Start();
+        }
+
+        private void AbrirLogin()
+        {
+            Application.Run(new Login());
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -86,13 +104,20 @@ namespace Login_teste.View
 
         private void NovaConsultaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            dtgConsulta entrar = new dtgConsulta();
-            entrar.Show();
+            this.Close();
+            th = new Thread(NovaConsulta);
+            th.SetApartmentState(ApartmentState.STA);
+            th.Start();
+        }
+
+        private void NovaConsulta()
+        {
+            Application.Run(new dtgConsulta());
         }
 
         private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void Home_Load(object sender, EventArgs e)

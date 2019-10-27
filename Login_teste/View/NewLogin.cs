@@ -9,11 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Login_teste.Modelo;
 using MySql.Data.MySqlClient;
+using System.Threading;
 
 namespace Login_teste.View
 {
     public partial class NewLogin : Form
     {
+        Thread th;
         public NewLogin()
         {
             InitializeComponent();
@@ -36,11 +38,20 @@ namespace Login_teste.View
             if(controle.existe)
             {
                 MessageBox.Show(mensagem, "Cadastro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+                th = new Thread(AbrirLogin);
+                th.SetApartmentState(ApartmentState.STA);
+                th.Start();
             }
             else
             {
                 MessageBox.Show(controle.mensagem);
             }
+        }
+
+        private void AbrirLogin()
+        {
+            Application.Run(new Login());
         }
 
         private void TxtUser_TextChanged(object sender, EventArgs e)
