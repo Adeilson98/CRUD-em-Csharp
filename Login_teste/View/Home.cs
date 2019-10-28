@@ -83,7 +83,7 @@ namespace Login_teste.View
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            Application.ExitThread();
+            LimparTxt();
         }
 
         private void TxtCPF_TextChanged(object sender, EventArgs e)

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Data;
+using Login_teste.CRUD.Model;
 
 namespace Login_teste.CRUD
 {

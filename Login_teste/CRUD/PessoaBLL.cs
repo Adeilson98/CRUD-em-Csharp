@@ -60,5 +60,20 @@ namespace Login_teste.CRUD
                 throw erro;
             }
         }
+        public DataTable Pesquisar(Pessoa pessoa)
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                dt = pessoaDAO.Pesquisar(pessoa);
+
+                return dt;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

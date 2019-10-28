@@ -114,5 +114,28 @@ namespace Login_teste.CRUD
                 throw erro;
             }
         }
+        public DataTable Pesquisar(Pessoa pessoa)
+        {
+            try
+            {
+                AbrirBanco();
+
+                MySqlDataAdapter da = new MySqlDataAdapter();
+                DataTable dt = new DataTable();
+
+                comando = new MySqlCommand("select * from table_logar.cadastro WHERE nome LIKE '%' @nome '%' ORDER BY nome", conexao);
+                comando.Parameters.AddWithValue("@nome", pessoa.Nome);
+
+                da.SelectCommand = comando;
+                da.Fill(dt);
+
+                return dt;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

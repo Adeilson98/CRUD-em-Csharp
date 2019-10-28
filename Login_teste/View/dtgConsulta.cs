@@ -112,6 +112,14 @@ namespace Login_teste.View
 
             listar();
         }
+        private void Pesquisar(Pessoa pessoa)
+        {
+            pessoa.Nome = txtPesquisa.Text.Trim();
+
+            PessoaBLL pessoaBLL = new PessoaBLL();
+
+            dataGridView1.DataSource = pessoaBLL.Pesquisar(pessoa);
+        }
 
         private void SairToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -219,6 +227,21 @@ namespace Login_teste.View
         private void AbrirHome()
         {
             Application.Run(new Home());
+        }
+
+        private void TxtPesquisa_TextChanged(object sender, EventArgs e)
+        {
+            if (txtPesquisa.Text == "")
+            {
+                PessoaBLL bLL = new PessoaBLL();
+
+                dataGridView1.DataSource = bLL.listar();
+            }
+            else
+            {
+                Pessoa pessoa = new Pessoa();
+                Pesquisar(pessoa);
+            }
         }
     }
 }
