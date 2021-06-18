@@ -15,18 +15,18 @@ namespace Login_teste.Cadastrar
     {
         public static void CriandoDataAdapter()
         {
-            MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;port=3306;database=table_logar");
-            MySqlCommand comando = new MySqlCommand("select * from table_logar.cadastro;", conn);
+            MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;port=3306;database=table_dados");
+            MySqlCommand comando = new MySqlCommand("select * from table_dados.cadastro;", conn);
             MySqlDataAdapter dtg = new MySqlDataAdapter(comando);
 
             DataSet CadastroDataSet;
 
             CadastroDataSet = new DataSet();
-            dtg.Fill(CadastroDataSet, "table_logar.cadastro");
+            dtg.Fill(CadastroDataSet, "table_dados.cadastro");
 
             BindingSource bsCadastro = new BindingSource();
             bsCadastro.DataSource = CadastroDataSet;
-            bsCadastro.DataMember = "table_logar.cadastro";
+            bsCadastro.DataMember = "table_dados.cadastro";
 
             
         }

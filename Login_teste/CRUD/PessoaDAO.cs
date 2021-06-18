@@ -15,7 +15,7 @@ namespace Login_teste.CRUD
             {
                 AbrirBanco();
 
-                comando = new MySqlCommand("INSERT INTO table_logar.cadastro (Nome, Nascimento, Sexo, RG, CPF, endereco, numero, bairro, CEP, cidade, celular, telefoneres) VALUES (@nome, @nascimento, @sexo, @RG, @CPF, @endereco, @numero, @bairro, @CEP, @cidade, @celular, @telefoneres)", conexao);
+                comando = new MySqlCommand("INSERT INTO table_dados.cadastro (Nome, Nascimento, Sexo, RG, CPF, endereco, numero, bairro, CEP, cidade, celular, telefone) VALUES (@nome, @nascimento, @sexo, @RG, @CPF, @endereco, @numero, @bairro, @CEP, @cidade, @celular, @telefone)", conexao);
                 comando.Parameters.AddWithValue("@nome", pessoa.Nome);
                 comando.Parameters.AddWithValue("@nascimento", pessoa.Nascimento);
                 comando.Parameters.AddWithValue("@sexo", pessoa.Sexo);
@@ -27,7 +27,7 @@ namespace Login_teste.CRUD
                 comando.Parameters.AddWithValue("@CEP", pessoa.Cep);
                 comando.Parameters.AddWithValue("@cidade", pessoa.Cidade);
                 comando.Parameters.AddWithValue("@celular", pessoa.Celular);
-                comando.Parameters.AddWithValue("@telefoneres", pessoa.Telefone);
+                comando.Parameters.AddWithValue("@telefone", pessoa.Telefone);
 
                 comando.ExecuteNonQuery();
             }

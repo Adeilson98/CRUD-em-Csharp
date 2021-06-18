@@ -9,7 +9,7 @@ namespace Login_teste.CRUD
 {
     public class Conexao
     {
-        string conecta = "server=localhost;user id=root;port=3306;database=table_logar";
+        string conecta = "server=localhost;user id=root;port=3306;database=table_dados";
         protected MySqlConnection conexao = null;
 
         //abrir conexao
