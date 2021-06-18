@@ -22,7 +22,7 @@ namespace Login_teste.Eminem
 
         public bool VrfLogin(String login, String senha)
         {
-            cmd.CommandText = "select * from table_logar.logins where login = @login and senha = @senha";
+            cmd.CommandText = "select * from table_dados.logins where login = @login and senha = @senha";
             cmd.Parameters.AddWithValue("@login", login);
             cmd.Parameters.AddWithValue("@senha", senha);
 
@@ -50,7 +50,7 @@ namespace Login_teste.Eminem
             tem = false;
             if (senha.Equals(VrfSenha))
             {
-                cmd.CommandText = "INSERT INTO table_logar.logins (login, senha) VALUES (@login, @senha)";
+                cmd.CommandText = "INSERT INTO table_dados.logins (login, senha) VALUES (@login, @senha)";
                 cmd.Parameters.AddWithValue("@login", login);
                 cmd.Parameters.AddWithValue("@senha", senha);
                 tem = true;

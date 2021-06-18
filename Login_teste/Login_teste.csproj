@@ -89,8 +89,8 @@
     <Compile Include="CRUD\PessoaBLL.cs" />
     <Compile Include="CRUD\PessoaDAO.cs" />
     <Compile Include="CRUD\Supercombo.cs" />
-    <Compile Include="Eminem\ComandoLogin.cs" />
-    <Compile Include="Eminem\Conexao.cs" />
+    <Compile Include="Login\ComandoLogin.cs" />
+    <Compile Include="Login\Conexao.cs" />
     <Compile Include="Modelo\ProjetoEntrar.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -23,7 +23,7 @@ namespace Login_teste.Eminem
         MySqlConnection  con = new MySqlConnection();
         public Conexao()
         {
-            con.ConnectionString = @"server=localhost;user id=root;port=3306;database=table_logar";
+            con.ConnectionString = @"server=localhost;user id=root;port=3306;database=table_dados";
         }
         public MySqlConnection conectar()
         {
