@@ -28,7 +28,10 @@ namespace Login_teste.View
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.ExitThread();
+            this.Close();
+            th = new Thread(AbrirLogin);
+            th.SetApartmentState(ApartmentState.STA);
+            th.Start();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -55,6 +58,11 @@ namespace Login_teste.View
         }
 
         private void TxtUser_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NewLogin_Load(object sender, EventArgs e)
         {
 
         }

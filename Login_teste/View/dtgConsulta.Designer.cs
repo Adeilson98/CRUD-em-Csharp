@@ -117,7 +117,7 @@
             this.button1.Location = new System.Drawing.Point(38, 70);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
+            this.button1.TabIndex = 15;
             this.button1.Text = "Editar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
@@ -127,7 +127,7 @@
             this.button2.Location = new System.Drawing.Point(38, 126);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 3;
+            this.button2.TabIndex = 16;
             this.button2.Text = "Excluir";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.Button2_Click);
@@ -137,7 +137,7 @@
             this.button3.Location = new System.Drawing.Point(38, 182);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 4;
+            this.button3.TabIndex = 17;
             this.button3.Text = "Salvar";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.Button3_Click);
@@ -150,7 +150,7 @@
             this.groupBox1.Location = new System.Drawing.Point(649, 257);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(154, 270);
-            this.groupBox1.TabIndex = 5;
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Editar";
             // 
@@ -168,7 +168,7 @@
             this.txtPesquisa.Location = new System.Drawing.Point(386, 27);
             this.txtPesquisa.Name = "txtPesquisa";
             this.txtPesquisa.Size = new System.Drawing.Size(251, 20);
-            this.txtPesquisa.TabIndex = 10;
+            this.txtPesquisa.TabIndex = 1;
             this.txtPesquisa.TextChanged += new System.EventHandler(this.TxtPesquisa_TextChanged);
             // 
             // txtNome
@@ -176,7 +176,7 @@
             this.txtNome.Location = new System.Drawing.Point(15, 130);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(201, 20);
-            this.txtNome.TabIndex = 11;
+            this.txtNome.TabIndex = 3;
             // 
             // label2
             // 
@@ -205,7 +205,7 @@
             this.comboBox1.Location = new System.Drawing.Point(251, 129);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 15;
+            this.comboBox1.TabIndex = 6;
             // 
             // label4
             // 
@@ -221,7 +221,7 @@
             this.txtRG.Location = new System.Drawing.Point(15, 210);
             this.txtRG.Name = "txtRG";
             this.txtRG.Size = new System.Drawing.Size(201, 20);
-            this.txtRG.TabIndex = 17;
+            this.txtRG.TabIndex = 5;
             // 
             // RG
             // 
@@ -237,7 +237,7 @@
             this.txtCPF.Location = new System.Drawing.Point(251, 169);
             this.txtCPF.Name = "txtCPF";
             this.txtCPF.Size = new System.Drawing.Size(201, 20);
-            this.txtCPF.TabIndex = 19;
+            this.txtCPF.TabIndex = 7;
             // 
             // label5
             // 
@@ -262,7 +262,7 @@
             this.txtEndereco.Location = new System.Drawing.Point(251, 210);
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(201, 20);
-            this.txtEndereco.TabIndex = 22;
+            this.txtEndereco.TabIndex = 8;
             // 
             // label7
             // 
@@ -278,7 +278,7 @@
             this.txtCelular.Location = new System.Drawing.Point(732, 169);
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(201, 20);
-            this.txtCelular.TabIndex = 24;
+            this.txtCelular.TabIndex = 13;
             // 
             // label8
             // 
@@ -294,7 +294,7 @@
             this.txtTelefone.Location = new System.Drawing.Point(732, 210);
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(201, 20);
-            this.txtTelefone.TabIndex = 26;
+            this.txtTelefone.TabIndex = 14;
             // 
             // dataGridView1
             // 
@@ -320,7 +320,7 @@
             this.txtNumero.Location = new System.Drawing.Point(493, 129);
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(201, 20);
-            this.txtNumero.TabIndex = 29;
+            this.txtNumero.TabIndex = 9;
             // 
             // label10
             // 
@@ -336,7 +336,7 @@
             this.txtBairro.Location = new System.Drawing.Point(493, 169);
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(201, 20);
-            this.txtBairro.TabIndex = 31;
+            this.txtBairro.TabIndex = 10;
             // 
             // label11
             // 
@@ -352,7 +352,7 @@
             this.txtCEP.Location = new System.Drawing.Point(493, 210);
             this.txtCEP.Name = "txtCEP";
             this.txtCEP.Size = new System.Drawing.Size(201, 20);
-            this.txtCEP.TabIndex = 33;
+            this.txtCEP.TabIndex = 11;
             // 
             // label12
             // 
@@ -368,14 +368,14 @@
             this.txtCidade.Location = new System.Drawing.Point(732, 129);
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(201, 20);
-            this.txtCidade.TabIndex = 35;
+            this.txtCidade.TabIndex = 12;
             // 
             // txtID
             // 
             this.txtID.Location = new System.Drawing.Point(18, 79);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(100, 20);
-            this.txtID.TabIndex = 6;
+            this.txtID.TabIndex = 2;
             // 
             // label13
             // 
@@ -391,7 +391,7 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(12, 171);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 37;
+            this.dateTimePicker1.TabIndex = 4;
             // 
             // dtgConsulta
             // 

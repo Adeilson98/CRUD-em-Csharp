@@ -74,7 +74,7 @@ namespace Login_teste.CRUD
             {
                 AbrirBanco();
 
-                comando = new MySqlCommand("UPDATE table_dados.cadastro SET nome = @nome, nascimento = @nascimento, sexo = @sexo, RG = @RG, CPF = @CPF, endereco = @endereco, numero = @numero, bairro = @bairro, CEP = @CEP, cidade = @cidade, celular = @celular, telefone = @telefoneres WHERE ID = @ID", conexao);
+                comando = new MySqlCommand("UPDATE table_dados.cadastro SET nome = @nome, nascimento = @nascimento, sexo = @sexo, RG = @RG, CPF = @CPF, endereco = @endereco, numero = @numero, bairro = @bairro, CEP = @CEP, cidade = @cidade, celular = @celular, telefone = @telefone WHERE ID = @ID", conexao);
                 comando.Parameters.AddWithValue("@ID", pessoa.ID);
                 comando.Parameters.AddWithValue("@nome", pessoa.Nome);
                 comando.Parameters.AddWithValue("@nascimento", pessoa.Nascimento);

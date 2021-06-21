@@ -107,14 +107,14 @@
             this.txtRG.Location = new System.Drawing.Point(12, 229);
             this.txtRG.Name = "txtRG";
             this.txtRG.Size = new System.Drawing.Size(270, 20);
-            this.txtRG.TabIndex = 2;
+            this.txtRG.TabIndex = 4;
             // 
             // txtNumero
             // 
             this.txtNumero.Location = new System.Drawing.Point(18, 395);
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(270, 20);
-            this.txtNumero.TabIndex = 3;
+            this.txtNumero.TabIndex = 7;
             this.txtNumero.TextChanged += new System.EventHandler(this.TxtCelular_TextChanged);
             // 
             // txtCelular
@@ -122,7 +122,7 @@
             this.txtCelular.Location = new System.Drawing.Point(320, 79);
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(270, 20);
-            this.txtCelular.TabIndex = 4;
+            this.txtCelular.TabIndex = 9;
             this.txtCelular.TextChanged += new System.EventHandler(this.TxtCelular_TextChanged);
             // 
             // txtTelefone
@@ -130,7 +130,7 @@
             this.txtTelefone.Location = new System.Drawing.Point(320, 133);
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(273, 20);
-            this.txtTelefone.TabIndex = 5;
+            this.txtTelefone.TabIndex = 10;
             this.txtTelefone.TextChanged += new System.EventHandler(this.TxtTelefone_TextChanged);
             // 
             // label1
@@ -183,7 +183,7 @@
             this.button1.Location = new System.Drawing.Point(281, 476);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(113, 23);
-            this.button1.TabIndex = 25;
+            this.button1.TabIndex = 13;
             this.button1.Text = "Salvar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
@@ -193,7 +193,7 @@
             this.button2.Location = new System.Drawing.Point(422, 476);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(113, 23);
-            this.button2.TabIndex = 26;
+            this.button2.TabIndex = 14;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.Button2_Click);
@@ -221,7 +221,7 @@
             this.txtEndereco.Location = new System.Drawing.Point(15, 340);
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(270, 20);
-            this.txtEndereco.TabIndex = 30;
+            this.txtEndereco.TabIndex = 6;
             // 
             // label8
             // 
@@ -237,7 +237,7 @@
             this.txtCPF.Location = new System.Drawing.Point(12, 283);
             this.txtCPF.Name = "txtCPF";
             this.txtCPF.Size = new System.Drawing.Size(270, 20);
-            this.txtCPF.TabIndex = 32;
+            this.txtCPF.TabIndex = 5;
             this.txtCPF.TextChanged += new System.EventHandler(this.TxtCPF_TextChanged);
             // 
             // comboBox1
@@ -249,7 +249,7 @@
             this.comboBox1.Location = new System.Drawing.Point(14, 125);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 33;
+            this.comboBox1.TabIndex = 2;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.ComboBox1_SelectedIndexChanged);
             // 
             // label9
@@ -266,7 +266,7 @@
             this.txtCidade.Location = new System.Drawing.Point(320, 176);
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(201, 20);
-            this.txtCidade.TabIndex = 41;
+            this.txtCidade.TabIndex = 11;
             // 
             // label12
             // 
@@ -282,7 +282,7 @@
             this.txtCEP.Location = new System.Drawing.Point(320, 215);
             this.txtCEP.Name = "txtCEP";
             this.txtCEP.Size = new System.Drawing.Size(201, 20);
-            this.txtCEP.TabIndex = 39;
+            this.txtCEP.TabIndex = 12;
             // 
             // label11
             // 
@@ -298,7 +298,7 @@
             this.txtBairro.Location = new System.Drawing.Point(21, 439);
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(201, 20);
-            this.txtBairro.TabIndex = 37;
+            this.txtBairro.TabIndex = 8;
             // 
             // label10
             // 
@@ -315,7 +315,7 @@
             this.dtNascimento.Location = new System.Drawing.Point(12, 179);
             this.dtNascimento.Name = "dtNascimento";
             this.dtNascimento.Size = new System.Drawing.Size(273, 20);
-            this.dtNascimento.TabIndex = 28;
+            this.dtNascimento.TabIndex = 3;
             this.dtNascimento.ValueChanged += new System.EventHandler(this.DtNascimento_ValueChanged);
             // 
             // Home

@@ -46,7 +46,7 @@
             this.txtUser.Location = new System.Drawing.Point(12, 83);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(169, 20);
-            this.txtUser.TabIndex = 0;
+            this.txtUser.TabIndex = 1;
             this.txtUser.TextChanged += new System.EventHandler(this.TxtUser_TextChanged);
             // 
             // txtSenha
@@ -55,7 +55,7 @@
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(169, 20);
-            this.txtSenha.TabIndex = 1;
+            this.txtSenha.TabIndex = 2;
             // 
             // txtConfSenha
             // 
@@ -63,7 +63,7 @@
             this.txtConfSenha.Name = "txtConfSenha";
             this.txtConfSenha.PasswordChar = '*';
             this.txtConfSenha.Size = new System.Drawing.Size(169, 20);
-            this.txtConfSenha.TabIndex = 2;
+            this.txtConfSenha.TabIndex = 3;
             // 
             // Usuario
             // 
@@ -123,7 +123,7 @@
             this.button1.Location = new System.Drawing.Point(15, 223);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 7;
+            this.button1.TabIndex = 4;
             this.button1.Text = "Criar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -144,6 +144,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "NewLogin";
             this.Text = "Cadastro";
+            this.Load += new System.EventHandler(this.NewLogin_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
