@@ -1,0 +1,1 @@
+Para melhor uso do programa, favor importar a base de dados localizado na pasta Base de Dados.
