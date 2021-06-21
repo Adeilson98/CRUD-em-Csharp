@@ -50,7 +50,7 @@ namespace Login_teste.CRUD
                 DataTable dt = new DataTable();
                 MySqlDataAdapter da = new MySqlDataAdapter();
 
-                comando = new MySqlCommand("SELECT * FROM table_logar.cadastro ORDER BY nome", conexao);
+                comando = new MySqlCommand("SELECT * FROM table_dados.cadastro ORDER BY nome", conexao);
 
                 da.SelectCommand = comando;
 
@@ -74,7 +74,7 @@ namespace Login_teste.CRUD
             {
                 AbrirBanco();
 
-                comando = new MySqlCommand("UPDATE table_logar.cadastro SET nome = @nome, nascimento = @nascimento, sexo = @sexo, RG = @RG, CPF = @CPF, endereco = @endereco, numero = @numero, bairro = @bairro, CEP = @CEP, cidade = @cidade, celular = @celular, telefoneres = @telefoneres WHERE ID = @ID", conexao);
+                comando = new MySqlCommand("UPDATE table_dados.cadastro SET nome = @nome, nascimento = @nascimento, sexo = @sexo, RG = @RG, CPF = @CPF, endereco = @endereco, numero = @numero, bairro = @bairro, CEP = @CEP, cidade = @cidade, celular = @celular, telefone = @telefoneres WHERE ID = @ID", conexao);
                 comando.Parameters.AddWithValue("@ID", pessoa.ID);
                 comando.Parameters.AddWithValue("@nome", pessoa.Nome);
                 comando.Parameters.AddWithValue("@nascimento", pessoa.Nascimento);
@@ -87,7 +87,7 @@ namespace Login_teste.CRUD
                 comando.Parameters.AddWithValue("@CEP", pessoa.Cep);
                 comando.Parameters.AddWithValue("@cidade", pessoa.Cidade);
                 comando.Parameters.AddWithValue("@celular", pessoa.Celular);
-                comando.Parameters.AddWithValue("@telefoneres", pessoa.Telefone);
+                comando.Parameters.AddWithValue("@telefone", pessoa.Telefone);
 
                 comando.ExecuteNonQuery();
             }
@@ -103,7 +103,7 @@ namespace Login_teste.CRUD
             {
                 AbrirBanco();
 
-                comando = new MySqlCommand("DELETE FROM table_logar.cadastro WHERE ID = @ID", conexao);
+                comando = new MySqlCommand("DELETE FROM table_dados.cadastro WHERE ID = @ID", conexao);
                 comando.Parameters.AddWithValue("@ID", pessoa.ID);
 
                 comando.ExecuteNonQuery();
@@ -123,7 +123,7 @@ namespace Login_teste.CRUD
                 MySqlDataAdapter da = new MySqlDataAdapter();
                 DataTable dt = new DataTable();
 
-                comando = new MySqlCommand("select * from table_logar.cadastro WHERE nome LIKE '%' @nome '%' ORDER BY nome", conexao);
+                comando = new MySqlCommand("select * from table_dados.cadastro WHERE nome LIKE '%' @nome '%' ORDER BY nome", conexao);
                 comando.Parameters.AddWithValue("@nome", pessoa.Nome);
 
                 da.SelectCommand = comando;
